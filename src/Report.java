@@ -7,7 +7,7 @@ public class Report {
         ArrayList<Record> dati = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader("dati.csv"))) {
-            String riga = reader.readLine(); // Salta intestazione
+            String riga;
             while ((riga = reader.readLine()) != null) {
                 String[] colonne = riga.split(";");
                 int anno = Integer.parseInt(colonne[0]);
